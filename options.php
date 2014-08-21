@@ -53,8 +53,8 @@
 						<td><input type="text" name="oizuled_conditional_fields_placeholder" size="10" value="<?php echo get_option('oizuled_conditional_fields_placeholder'); ?>" /></td>
 						<td><input type="text" name="oizuled_conditional_fields_class" size="10" value="<?php echo get_option('oizuled_conditional_fields_class'); ?>" /></td>
 						<td>
-							<input type="radio" name="oizuled_conditional_fields_required" value="true" <?php if (get_option('oizuled_conditional_fields_required') == true) { echo 'checked'; } ?> /> <?php _e('Yes', 'conditional-woo-checkout-field'); ?><br />
-							<input type="radio" name="oizuled_conditional_fields_required" value="false" <?php if (get_option('oizuled_conditional_fields_required') == false) { echo 'checked'; } ?> /> <?php _e('No', 'conditional-woo-checkout-field'); ?>
+							<input type="radio" name="oizuled_conditional_fields_required" value="yes" <?php if (get_option('oizuled_conditional_fields_required') == 'yes') { echo 'checked'; } ?> /> <?php _e('Yes', 'conditional-woo-checkout-field'); ?><br />
+							<input type="radio" name="oizuled_conditional_fields_required" value="no" <?php if (get_option('oizuled_conditional_fields_required') == 'no') { echo 'checked'; } ?> /> <?php _e('No', 'conditional-woo-checkout-field'); ?>
 						</td>
 						<td><input type="text" name="oizuled_conditional_fields_requiredtext" size="10" value="<?php echo get_option('oizuled_conditional_fields_requiredtext'); ?>" /></td>
 						<td>
@@ -65,9 +65,10 @@
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colspan="7"><input type="hidden" name="action" value="update" /><?php submit_button(); ?></td>
-						<td><a href="https://twitter.com/oizuled" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @oizuled</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p></td>
-						<td><div class="fb-like" data-href="https://www.facebook.com/OizuledWP" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></td>
+						<td colspan="6"><input type="hidden" name="action" value="update" /><?php submit_button(); ?></td>
+						<td><a href="http://wordpress.org/support/view/plugin-reviews/conditional-woo-checkout-field-pro"><?php _e('Enjoy this plugin? Give it a 5 star rating.', 'conditional-woo-checkout-field-pro'); ?></a></td>
+						<td><a href="https://twitter.com/surprisewebsvc" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @surprisewebsvc</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p></td>
+						<td><div class="fb-like" data-href="https://www.facebook.com/SurpriseAZWebServices" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></td>
 					</tr>
 				</tfoot>
 			</table>
