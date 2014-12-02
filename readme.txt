@@ -3,8 +3,8 @@ Contributors: scott.deluzio
 Tags: plugin, woocommerce, checkout, custom, customer, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
-Tested up to: 4.0
-Stable tag: 1.0.3
+Tested up to: 4.0.1
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,8 +62,12 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.4 =
+* Bug fix: Custom field not appending to order emails.
+
 = 1.0.3 =
 * Minor Fix
+
 = 1.0.2 =
 * Bug fix to allow the field to not be required.
 
@@ -74,5 +78,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.3 =
-* Minor fixes
+= 1.0.4 =
+* Bug fix: Custom field not appending to order emails.
