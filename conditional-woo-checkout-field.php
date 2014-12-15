@@ -4,7 +4,7 @@
    Plugin URI: http://surpriseazwebservices.com/wordpress-plugins/conditional-woo-checkout-field/
    Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
    Description: Display a custom field at checkout in your WooCommerce store if a certain product is in the customer's cart.
-   Version: 1.0.5
+   Version: 1.0.6
    Author: Scott DeLuzio
    Author URI: http://surpriseazwebservices.com
    License: GPL2
@@ -155,7 +155,7 @@ if (get_option('oizuled_conditional_fields_type') == 'select') {
 		'required'      => get_option('oizuled_conditional_fields_required'),
 		'options'		=> (get_option('oizuled_conditional_fields_type') == 'select') ? $select : null
 		), $checkout->get_value( 'conditional_field' ));
-		
+
 		echo '</div>';
 	}
 }
@@ -166,11 +166,11 @@ if (get_option('oizuled_conditional_fields_type') == 'select') {
 add_action('woocommerce_checkout_process', 'conditional_checkout_field_process');
  
 function conditional_checkout_field_process() {
+	$pid = get_option('oizuled_conditional_fields_pid');
+	$check_in_cart = conditional_product_in_cart($pid);
     // Check if the field is required and set, if not then show an error message.
-    if ($check_in_cart == true && get_option('oizuled_conditional_fields_required') == 'yes') {
-		if ( !$_POST['conditional_field'] ) {
+    if ( $check_in_cart == true && get_option('oizuled_conditional_fields_required') == 'yes' && !$_POST['conditional_field'] ) {
 			wc_add_notice( __( get_option('oizuled_conditional_fields_requiredtext') ), 'error' );
-		}
 	}
 }
 
