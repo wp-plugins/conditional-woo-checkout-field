@@ -3,8 +3,8 @@ Contributors: scott.deluzio
 Tags: plugin, woocommerce, checkout, custom, customer, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
-Tested up to: 4.0
-Stable tag: 1.0.3
+Tested up to: 4.0.1
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,8 +62,18 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.6 =
+* Bug fix: Some orders were being processed when the conditional field was set to be required, but the customer did not complete the field.
+
+= 1.0.5 =
+* Bug fix: When the conditional field was set to be required, it was requiring it on all orders regardless of whether or not the conditional product was in the cart. This update correctly checks to see if the conditional product is in the cart, and if the conditional field is required. If both of those conditions are met it will check to see if the conditional field has a value before processing the order, otherwise it will display an error message.
+
+= 1.0.4 =
+* Bug fix: Custom field not appending to order emails.
+
 = 1.0.3 =
 * Minor Fix
+
 = 1.0.2 =
 * Bug fix to allow the field to not be required.
 
@@ -74,5 +84,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.3 =
-* Minor fixes
+= 1.0.6 =
+* Bug fix: Some orders were being processed when the conditional field was set to be required, but the customer did not complete the field.
