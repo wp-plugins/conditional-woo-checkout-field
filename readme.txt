@@ -4,7 +4,7 @@ Tags: plugin, woocommerce, checkout, custom, customer, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
 Tested up to: 4.1
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,9 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.8 =
+* Minor Fix
+
 = 1.0.7 =
 * Minor Fix
 
@@ -97,5 +100,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.7 =
+= 1.0.8 =
 * Minor Fix
