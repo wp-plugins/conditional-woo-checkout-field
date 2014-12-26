@@ -3,8 +3,8 @@ Contributors: scott.deluzio
 Tags: plugin, woocommerce, checkout, custom, customer, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
-Tested up to: 4.0
-Stable tag: 1.0.3
+Tested up to: 4.1
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,16 @@ This plugin lets you configure an additional field to be displayed at checkout f
 * Whether or not to add the customer's input to the order email or invoice
 
 This plugin requires your site to have WooCommerce installed in order to work. It is not compatible with other e-commerce plugins.
+
+**Pro Version Now Available**
+[Update to Pro] (https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/) to get even more features.
+
+* Display up to five custom conditional fields at checkout (free version only allows one).
+* Display each conditional field on an unlimited number of products (free version only allows the field to display for one product).
+* Increased variety of available input fields including: Text box, multi-line text area, drop-down/select menu, country list, state list, check boxes, password, radio buttons, and date picker.
+* Bonus: Easily edit any of the default WooCommerce checkout fields without having to edit any code.
+
+Get the pro version by [clicking here] (https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/).
 
 == Installation ==
 1. Download archive and unzip in wp-content/plugins or install via Plugins – Add New.
@@ -62,8 +72,24 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.8 =
+* Minor Fix
+
+= 1.0.7 =
+* Minor Fix
+
+= 1.0.6 =
+* Bug fix: Some orders were being processed when the conditional field was set to be required, but the customer did not complete the field.
+
+= 1.0.5 =
+* Bug fix: When the conditional field was set to be required, it was requiring it on all orders regardless of whether or not the conditional product was in the cart. This update correctly checks to see if the conditional product is in the cart, and if the conditional field is required. If both of those conditions are met it will check to see if the conditional field has a value before processing the order, otherwise it will display an error message.
+
+= 1.0.4 =
+* Bug fix: Custom field not appending to order emails.
+
 = 1.0.3 =
 * Minor Fix
+
 = 1.0.2 =
 * Bug fix to allow the field to not be required.
 
@@ -74,5 +100,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.3 =
-* Minor fixes
+= 1.0.8 =
+* Minor Fix
