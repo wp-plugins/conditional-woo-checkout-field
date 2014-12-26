@@ -26,14 +26,14 @@ This plugin lets you configure an additional field to be displayed at checkout f
 This plugin requires your site to have WooCommerce installed in order to work. It is not compatible with other e-commerce plugins.
 
 **Pro Version Now Available**
-[Update to Pro] (https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/) to get even more features.
+[Update to Pro](https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/) to get even more features.
 
 * Display up to five custom conditional fields at checkout (free version only allows one).
 * Display each conditional field on an unlimited number of products (free version only allows the field to display for one product).
 * Increased variety of available input fields including: Text box, multi-line text area, drop-down/select menu, country list, state list, check boxes, password, radio buttons, and date picker.
 * Bonus: Easily edit any of the default WooCommerce checkout fields without having to edit any code.
 
-Get the pro version by [clicking here] (https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/).
+Get the pro version by [clicking here](https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/).
 
 == Installation ==
 1. Download archive and unzip in wp-content/plugins or install via Plugins – Add New.
