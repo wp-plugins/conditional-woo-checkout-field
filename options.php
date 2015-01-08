@@ -14,6 +14,48 @@
 		document.getElementById(id).style.display = 'none';
 	}
 </script>
+<style>
+.upgrade {
+	-moz-box-shadow: 0px 10px 14px -7px #3e7327;
+	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.upgrade:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+	background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+	background-color:#72b352;
+}
+.upgrade:active {
+	position:relative;
+	top:1px;
+}
+</style>
 <div class="wrap">
 	<div class="postbox">
 		<h2><?php _e('Conditional Checkout Field', 'conditional-woo-checkout-field'); ?></h2>
@@ -69,6 +111,15 @@
 						<td><a href="http://wordpress.org/support/view/plugin-reviews/conditional-woo-checkout-field-pro"><?php _e('Enjoy this plugin? Give it a 5 star rating.', 'conditional-woo-checkout-field-pro'); ?></a></td>
 						<td><a href="https://twitter.com/surprisewebsvc" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @surprisewebsvc</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p></td>
 						<td><div class="fb-like" data-href="https://www.facebook.com/SurpriseAZWebServices" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></td>
+					</tr>
+					<tr>
+						<th colspan="2">Upgrade to Pro!</th>
+						<th colspan="4">
+							Upgrade to have more conditional fields, and make each field display for any number of products.<br />
+							Bonus - Pro version comes with an editor for the default checkout fields. Choose whether to make a field required, hide it, and more.<br />
+							<a href="https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/" target="_blank" class="upgrade">Upgrade Now!</a>
+						</th>
+						<th colspan="3"></th>
 					</tr>
 				</tfoot>
 			</table>

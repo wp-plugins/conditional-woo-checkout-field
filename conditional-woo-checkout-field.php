@@ -1,12 +1,12 @@
 <?php
    /*
    Plugin Name: Conditional Woo Checkout Field
-   Plugin URI: http://surpriseazwebservices.com/wordpress-plugins/conditional-woo-checkout-field/
+   Plugin URI: https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field/
    Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
    Description: Display a custom field at checkout in your WooCommerce store if a certain product is in the customer's cart.
-   Version: 1.0.3
+   Version: 1.0.9
    Author: Scott DeLuzio
-   Author URI: http://surpriseazwebservices.com
+   Author URI: https://surpriseazwebservices.com
    License: GPL2
    Text Domain: conditional-woo-checkout-field
    */
@@ -26,6 +26,13 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	*/
+	
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wc_fields_action_links' );
+
+function wc_fields_action_links( $links ) {
+   $links[] = '<a href="https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/" target="_blank">Upgrade to PRO</a>';
+   return $links;
+}
 /* Load Text Domain */
 
 /*
@@ -142,6 +149,14 @@ if (get_option('oizuled_conditional_fields_type') == 'select') {
 		$select[$option] = $option;
 	}
 }
+
+$required = null;
+if (get_option('oizuled_conditional_fields_required') == 'yes') {
+	$required = true;
+}
+if (get_option('oizuled_conditional_fields_required') == 'no') {
+	$required = false;
+}
 	
 	// Check if the product is in the cart and show the custom fields if it is
 	if ($check_in_cart == true ) {
@@ -152,10 +167,10 @@ if (get_option('oizuled_conditional_fields_type') == 'select') {
 		'label'         => get_option('oizuled_conditional_fields_label'),
 		'placeholder'   => (in_array(get_option('oizuled_conditional_fields_type'), array('text', 'textarea'))) ? get_option('oizuled_conditional_fields_placeholder') : null,
 		'class'         => array(get_option('oizuled_conditional_fields_class')),
-		'required'      => get_option('oizuled_conditional_fields_required'),
+		'required'      => $required,
 		'options'		=> (get_option('oizuled_conditional_fields_type') == 'select') ? $select : null
 		), $checkout->get_value( 'conditional_field' ));
-		
+
 		echo '</div>';
 	}
 }
@@ -166,11 +181,11 @@ if (get_option('oizuled_conditional_fields_type') == 'select') {
 add_action('woocommerce_checkout_process', 'conditional_checkout_field_process');
  
 function conditional_checkout_field_process() {
+	$pid = get_option('oizuled_conditional_fields_pid');
+	$check_in_cart = conditional_product_in_cart($pid);
     // Check if the field is required and set, if not then show an error message.
-    if (get_option('oizuled_conditional_fields_required') == 'yes') {
-		if ( !$_POST['conditional_field'] ) {
+    if ( $check_in_cart == true && get_option('oizuled_conditional_fields_required') == 'yes' && !$_POST['conditional_field'] ) {
 			wc_add_notice( __( get_option('oizuled_conditional_fields_requiredtext') ), 'error' );
-		}
 	}
 }
 
@@ -188,12 +203,12 @@ function conditional_checkout_field_update_order_meta( $order_id ) {
 /**
  * Add the field to order emails
  **/
-add_filter( 'woocommerce_email_order_meta_keys', 'conditional_order_meta_keys' );
+add_action( 'woocommerce_email_after_order_table', 'conditional_order_meta_keys', 15, 2 );
 
-function conditional_order_meta_keys() {
+function conditional_order_meta_keys($order) {
 	if (get_option('oizuled_conditional_fields_addemail') == 'yes') {
-		if (get_post_meta( get_the_ID(), get_option('oizuled_conditional_fields_title'))) {
-			echo '<strong>' . get_option('oizuled_conditional_fields_title') . '</strong><br />' . get_post_meta( get_the_ID(), get_option('oizuled_conditional_fields_title'), true) . '<br />';
+		if (get_post_meta( $order->id, get_option('oizuled_conditional_fields_title'), true )) {
+			echo '<br /><strong>' . get_option('oizuled_conditional_fields_title') . ':</strong><br />' . get_post_meta( $order->id, get_option('oizuled_conditional_fields_title'), true );
 		}
 	}
 }
