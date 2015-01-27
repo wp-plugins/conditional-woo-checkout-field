@@ -115,7 +115,7 @@
 					<tr>
 						<th colspan="2">Upgrade to Pro!</th>
 						<th colspan="4">
-							Upgrade to have more conditional fields, and make each field display for any number of products.<br />
+							Upgrade to have unlimited conditional fields, and make each field display for any number of products.<br />
 							Bonus - Pro version comes with an editor for the default checkout fields. Choose whether to make a field required, hide it, and more.<br />
 							<a href="https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/" target="_blank" class="upgrade">Upgrade Now!</a>
 						</th>

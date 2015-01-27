@@ -4,7 +4,7 @@ Tags: plugin, woocommerce, checkout, custom, customer, input, input field
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N2TYAV69U9CP4
 Requires at least: 3.1.0
 Tested up to: 4.1
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,7 +28,7 @@ This plugin requires your site to have WooCommerce installed in order to work. I
 **Pro Version Now Available**
 [Update to Pro](https://surpriseazwebservices.com/plugins/conditional-woo-checkout-field-pro/) to get even more features.
 
-* Display up to five custom conditional fields at checkout (free version only allows one).
+* Display an unlimited number of custom conditional fields at checkout (free version only allows one).
 * Display each conditional field on an unlimited number of products (free version only allows the field to display for one product).
 * Increased variety of available input fields including: Text box, multi-line text area, drop-down/select menu, country list, state list, check boxes, password, radio buttons, and date picker.
 * Bonus: Easily edit any of the default WooCommerce checkout fields without having to edit any code.
@@ -72,6 +72,9 @@ A few examples include:
 6. Custom error message displayed after the customer attempts to checkout without completing your required field.
 
 == Changelog ==
+= 1.0.10 =
+* Minor Fix
+
 = 1.0.9 =
 * Bug fix: Some fields were incorrectly set to be required, when the required setting was set to "No"
 
@@ -103,5 +106,5 @@ A few examples include:
 * Initial release.
 
 == Upgrade Notice ==
-= 1.0.9 =
-* Bug fix: Some fields were incorrectly set to be required, when the required setting was set to "No"
+= 1.0.10 =
+* Minor Fix
